@@ -146,11 +146,9 @@ def team_colors(team_name)
 end
 
 def team_names
-  team_array = []
-  game_hash.each do |location, team_data|
-    team_array << team_data[:team_name]
+  game_hash.map do |location, team_data|
+    team_data[:team_name]
   end
-  team_array
 end
 
 def player_numbers(team_name)
@@ -188,3 +186,4 @@ def big_shoe_rebounds
   end
 end
       
+  
